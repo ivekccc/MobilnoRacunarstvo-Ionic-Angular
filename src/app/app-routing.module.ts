@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'quotes',
     pathMatch: 'full'
   },
+  {
+    path: 'fun-facts',
+    loadChildren: () => import('./fun-facts/fun-facts.module').then( m => m.FunFactsPageModule)
+  },
 ];
 
 @NgModule({
