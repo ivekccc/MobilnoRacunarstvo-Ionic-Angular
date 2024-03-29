@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quotes',
@@ -7,7 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class QuotesPage implements OnInit,OnDestroy {
 
-  constructor() {
+  constructor(private menuCtrl:MenuController) {
     console.log('constructor');
    }
 
@@ -35,4 +36,7 @@ export class QuotesPage implements OnInit,OnDestroy {
     console.log('ngOnDestroy');
   }
 
+  openMenu(){
+    this.menuCtrl.open();
+  }
 }
